@@ -162,20 +162,128 @@
                 text-decoration: underline !important;
             }
             
-            /* Error message styling */
+            /* Enhanced Error message styling */
             .fluid-callout-memo--error {
-                border-radius: 8px !important;
-                margin-bottom: 15px;
-                border-left-width: 5px !important;
+                border-radius: 12px !important;
+                margin-bottom: 20px;
+                border-left-width: 6px !important;
+                background: linear-gradient(to right, #fef2f2, #fee2e2) !important;
+                box-shadow: 0 4px 12px rgba(194, 58, 76, 0.15);
+                border-left-color: #dc2626 !important;
+                animation: fadeIn 0.5s ease-out;
+            }
+            
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
             }
             
             .fluid-callout-memo__msg {
-                font-weight: bold !important;
-                font-size: 14px !important;
+                font-weight: 700 !important;
+                font-size: 15px !important;
+                color: #7f1d1d !important;
+                line-height: 1.5;
+                text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
             }
             
             .fluid-callout-memo__icon {
-                font-size: 24px !important;
+                font-size: 28px !important;
+                color: #dc2626 !important;
+                text-shadow: 0 2px 4px rgba(220, 38, 38, 0.2);
+            }
+            
+            .fluid-callout-memo__inner {
+                padding: 16px 20px;
+                align-items: center;
+            }
+            
+            .fluid-callout-memo__icon-container {
+                min-width: 60px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(220, 38, 38, 0.1);
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+            }
+            
+            /* Custom error icon using CSS */
+            .custom-error-icon {
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                position: relative;
+            }
+            
+            .custom-error-icon::before,
+            .custom-error-icon::after {
+                content: '';
+                position: absolute;
+                background-color: #dc2626;
+                border-radius: 2px;
+            }
+            
+            .custom-error-icon::before {
+                width: 4px;
+                height: 20px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            
+            .custom-error-icon::after {
+                width: 4px;
+                height: 20px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            
+            /* Alert symbol icon */
+            .alert-icon {
+                display: inline-block;
+                width: 28px;
+                height: 28px;
+                position: relative;
+            }
+            
+            .alert-icon::before {
+                content: '!';
+                position: absolute;
+                color: white;
+                font-size: 20px;
+                font-weight: 900;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            }
+            
+            .alert-icon::after {
+                content: '';
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                background-color: #dc2626;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+            }
+            
+            /* Updated error message text styling */
+            .error-message-text {
+                font-size: 15px !important;
+                font-weight: 700 !important;
+                color: #7f1d1d !important;
+                background: rgba(255, 255, 255, 0.7);
+                padding: 5px 10px;
+                border-radius: 6px;
+                display: inline-block;
+                border-left: 3px solid #dc2626;
             }
         </style>
     </head>
@@ -202,12 +310,15 @@
                                                         <div class="fluid-callout-memo fluid-callout-memo--error">
                                                             <div class="fluid-callout-memo__inner">
                                                                 <div class="fluid-callout-memo__icon-container">
-                                                                    <span class="fluid-callout-memo__icon fluid-icon-exclamation-triangle"></span>
+                                                                    <!-- Custom alert icon -->
+                                                                    <span class="alert-icon"></span>
                                                                 </div>
                                                                 <div class="fluid-callout-memo__text-container">
                                                                     <div class="fluid-callout-memo__msg-container">
                                                                         <div class="fluid-callout-memo__msg">
-                                                                            <div>The Username and/or Password you entered does not match our records. Try again.</div>
+                                                                            <div class="error-message-text">
+                                                                                🔒 <strong>Login Failed:</strong> The username or password you entered is incorrect. Please try again.
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
